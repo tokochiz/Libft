@@ -1,30 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 15:35:36 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/18 18:31:50 by  ctokoyod        ###   ########.fr       */
+/*   Created: 2023/11/18 18:29:18 by  ctokoyod         #+#    #+#             */
+/*   Updated: 2023/11/18 18:30:04 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#ifndef LIBFT_H 
+# define LIBFT_H
 
-int	ft_isalpha(char c)
-{
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-	{
-		return (1);
-	}
-	return (0);
-}
-
-// int	main(void)
-// {
-// 	char c = ' ';
-	
-// 	printf("%d", ft_isalpha(c));
-// }
+#endif

@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 15:35:36 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/18 18:31:50 by  ctokoyod        ###   ########.fr       */
+/*   Created: 2023/11/18 16:35:52 by  ctokoyod         #+#    #+#             */
+/*   Updated: 2023/11/18 18:31:44 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
-
-int	ft_isalpha(char c)
+int	ft_isalnum(char c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >= 'a'
+			&& c <= 'z'))
 	{
 		return (1);
 	}
@@ -24,7 +22,7 @@ int	ft_isalpha(char c)
 
 // int	main(void)
 // {
-// 	char c = ' ';
-	
-// 	printf("%d", ft_isalpha(c));
+// 	char c = '4';
+
+// 	printf("%d", ft_isalnum(c));
 // }

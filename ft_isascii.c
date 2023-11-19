@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 15:35:36 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/18 18:31:50 by  ctokoyod        ###   ########.fr       */
+/*   Created: 2023/11/18 16:40:42 by  ctokoyod         #+#    #+#             */
+/*   Updated: 2023/11/18 18:31:55 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
-
-int	ft_isalpha(char c)
+int	ft_isascii(char c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	if (c >= 1 && c <= 126)
 	{
 		return (1);
 	}
@@ -24,7 +21,7 @@ int	ft_isalpha(char c)
 
 // int	main(void)
 // {
-// 	char c = ' ';
+// 	char c = "∂";
 	
-// 	printf("%d", ft_isalpha(c));
+// 	printf("%d", ft_isascii(c));
 // }

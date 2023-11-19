@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 15:35:36 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/18 18:31:50 by  ctokoyod        ###   ########.fr       */
+/*   Created: 2023/11/18 18:08:10 by  ctokoyod         #+#    #+#             */
+/*   Updated: 2023/11/18 18:08:21 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
 
-int	ft_isalpha(char c)
+
+int main(void)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-	{
-		return (1);
-	}
-	return (0);
-}
-
-// int	main(void)
-// {
-// 	char c = ' ';
 	
-// 	printf("%d", ft_isalpha(c));
-// }
+}

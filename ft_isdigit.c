@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 15:35:36 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/18 18:31:50 by  ctokoyod        ###   ########.fr       */
+/*   Created: 2023/11/18 16:10:24 by  ctokoyod         #+#    #+#             */
+/*   Updated: 2023/11/18 18:32:04 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
 
-int	ft_isalpha(char c)
+int	ft_isdigit(char c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	if ((c >= '0' && c <= '9'))
 	{
 		return (1);
 	}
@@ -24,7 +24,7 @@ int	ft_isalpha(char c)
 
 // int	main(void)
 // {
-// 	char c = ' ';
-	
-// 	printf("%d", ft_isalpha(c));
+// 	char c = '9';
+
+// 	printf("%d", ft_isdigit(c));
 // }

@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 15:35:36 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/18 18:31:50 by  ctokoyod        ###   ########.fr       */
+/*   Created: 2023/11/18 17:12:14 by  ctokoyod         #+#    #+#             */
+/*   Updated: 2023/11/18 18:32:17 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
-
-int	ft_isalpha(char c)
+int	ft_strlen(char *str)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	int	count;
+
+	count = 0;
+	while (*str != '\0')
 	{
-		return (1);
+		str++;
+		count++;
 	}
-	return (0);
+	return (count);
 }
 
 // int	main(void)
 // {
-// 	char c = ' ';
-	
-// 	printf("%d", ft_isalpha(c));
+// 	char str[] = "asdfgh";
+
+// 	printf("%s\n", str);
+// 	printf("len : %d\n", ft_strlen(str));
 // }
