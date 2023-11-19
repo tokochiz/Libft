@@ -6,24 +6,22 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 17:34:02 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/18 18:32:39 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2023/11/19 21:37:27 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// void *ft_memset(void *s, int c, size_t size)
-// {
-// 	char *ptr = s;
-	
-// 	while (size-- > 0)
-// 	{
-		
-// 	}
-// }
+#include <stdio.h>
 
-// int	main(void)
-// {
-// 	char str[] = "asdfgh";
+void	*ft_memset(void *buf, int ch, size_t n)
+{
+	unsigned char	*ptr;
+	unsigned char	value;
 
-// 	printf("%s\n", str);
-// 	printf("len : %d\n", ft_strlen(str));
-// }
+	ptr = buf;
+	value = (unsigned char)ch;
+	while (n-- > 0)
+	{
+		*ptr++ = value;
+	}
+	return (buf);
+}

@@ -6,9 +6,11 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 17:12:14 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/18 18:32:17 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2023/11/19 21:04:14 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strlen(char *str)
 {
@@ -30,3 +32,4 @@ int	ft_strlen(char *str)
 // 	printf("%s\n", str);
 // 	printf("len : %d\n", ft_strlen(str));
 // }
+

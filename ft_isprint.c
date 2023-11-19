@@ -6,13 +6,13 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 16:45:54 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/18 18:32:08 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2023/11/19 18:34:50 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(char c)
 {
-	if (c >= 20 && c <= 126)
+	if (c >= 32 && c <= 126)
 	{
 		return (1);
 	}

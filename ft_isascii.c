@@ -6,13 +6,13 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 16:40:42 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/18 18:31:55 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2023/11/19 18:35:07 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(char c)
 {
-	if (c >= 1 && c <= 126)
+	if (c >= 0 && c <= 127)
 	{
 		return (1);
 	}
