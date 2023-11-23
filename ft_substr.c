@@ -6,13 +6,14 @@
 /*   By: ctokoyod <ctokoyod@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 22:00:36 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/21 22:25:52 by ctokoyod         ###   ########.fr       */
+/*   Updated: 2023/11/23 23:58:39 by ctokoyod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
- // 家からcommit test
+    // 家からcommit test
+    // 20231123
 }
 
 int main(void)
