@@ -6,11 +6,13 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 16:45:54 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/19 18:34:50 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2023/11/25 18:22:49 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char c)
+#include "libft.h"
+
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 	{
@@ -18,10 +20,3 @@ int	ft_isprint(char c)
 	}
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	char c = '	'; //tab = 0
-	
-// 	printf("%d", ft_isprint(c));
-// }

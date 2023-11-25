@@ -6,11 +6,13 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 16:35:52 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/18 18:31:44 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2023/11/25 18:35:20 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(char c)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
 	if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >= 'a'
 			&& c <= 'z'))
@@ -19,10 +21,3 @@ int	ft_isalnum(char c)
 	}
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	char c = '4';
-
-// 	printf("%d", ft_isalnum(c));
-// }

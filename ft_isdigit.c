@@ -6,14 +6,13 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 16:10:24 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/18 18:32:04 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2023/11/25 18:38:31 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int c)
 {
 	if ((c >= '0' && c <= '9'))
 	{
@@ -21,10 +20,3 @@ int	ft_isdigit(char c)
 	}
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	char c = '9';
-
-// 	printf("%d", ft_isdigit(c));
-// }

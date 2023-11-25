@@ -1,22 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 16:40:42 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/25 18:24:42 by  ctokoyod        ###   ########.fr       */
+/*   Created: 2023/11/25 21:14:31 by  ctokoyod         #+#    #+#             */
+/*   Updated: 2023/11/25 21:14:43 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isascii(int c)
+size_t ft_strlcat(char * dst, const char * src, size_t dstsize)
 {
-	if (c >= 0 && c <= 127)
-	{
-		return (1);
-	}
-	return (0);
+	
 }

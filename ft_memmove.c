@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/19 19:52:40 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/25 21:01:56 by  ctokoyod        ###   ########.fr       */
+/*   Created: 2023/11/25 18:56:53 by  ctokoyod         #+#    #+#             */
+/*   Updated: 2023/11/25 20:11:49 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	const unsigned char	*x;
 	unsigned char		*y;
 
 	x = (const unsigned char *)src;
-	y = (unsigned char *)dst;
+	y = (unsigned char *)dest;
 	while (n-- > 0)
 	{
 		*(y++) = *(x++);
 	}
-	return ((void *)dst);
+	return ((void *)dest);
 }
 
 // int	main(void)
@@ -33,9 +33,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 // 	char str2[] = "abcdefghijk";
 // 	char str3[] = "123 4 5";
 
-// 	ft_memcpy(dst, str1, strlen(str1));
-// 	ft_memcpy(dst, str2, 3);
-// 	ft_memcpy(dst, str3, sizeof(str3));
+// 	ft_memmove(dst, str1, strlen(str1));
+// 	ft_memmove(dst, str2, 3);
+// 	ft_memmove(dst, str3, sizeof(str3));
 
 // 	printf("/*----- ft_memcpy -----*/\n");
 // 	printf("str1 = %s\n", str1);
