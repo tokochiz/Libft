@@ -42,5 +42,5 @@ int main(void)
         printf("not found\n");
     }
 
-    return 0; // main関数の戻り値を追加しました
+    return 0;
 }
