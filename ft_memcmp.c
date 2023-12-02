@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 18:56:01 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/02 22:29:47 by  ctokoyod        ###   ########.fr       */
+/*   Created: 2023/12/02 20:04:41 by  ctokoyod         #+#    #+#             */
+/*   Updated: 2023/12/02 22:26:49 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const unsigned char	*tmp;
-	unsigned char		target;
+	const unsigned char	*tmp1;
+	const unsigned char	*tmp2;
 
-	target = (unsigned char)c;
-	tmp = (unsigned char *)s;
-	while (n > 0)
+	tmp1 = (const unsigned char *)s1;
+	tmp2 = (const unsigned char *)s2;
+	while (n-- > 0)
 	{
-		if (*tmp == target)
-			return ((void *)tmp);
-		tmp++;
-		n--;
+		if (*tmp1 > *tmp2)
+		{
+			return (1);
+		}
+		else if (*tmp1 < *tmp2)
+		{
+			return (-1);
+		}
+		tmp1++;
+		tmp2++;
 	}
-	return (NULL);
+	return (0);
 }
