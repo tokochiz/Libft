@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 19:52:40 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/25 21:01:56 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2023/12/02 22:30:17 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,21 +26,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return ((void *)dst);
 }
 
-// int	main(void)
-// {
-// 	char dst[20] = "abcde";
-// 	char str1[] = "123";
-// 	char str2[] = "abcdefghijk";
-// 	char str3[] = "123 4 5";
-
-// 	ft_memcpy(dst, str1, strlen(str1));
-// 	ft_memcpy(dst, str2, 3);
-// 	ft_memcpy(dst, str3, sizeof(str3));
-
-// 	printf("/*----- ft_memcpy -----*/\n");
-// 	printf("str1 = %s\n", str1);
-// 	printf("str2 = %s\n", str2);
-// 	printf("str3 = %s\n", str3);
-
-// 	return (0);
-// }
