@@ -1,42 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 17:43:53 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/03 15:32:19 by  ctokoyod        ###   ########.fr       */
+/*   Created: 2023/12/02 17:41:31 by  ctokoyod         #+#    #+#             */
+/*   Updated: 2023/12/03 17:10:14 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
-{
-	unsigned char	*tmp;
-	unsigned char	*last;
-    char ch;
+size_t	ft_strlen(const char *str);
 
-	tmp = (unsigned char *)s;
-	last = NULL;
-    ch = (char)c;
+char	*ft_strchr(const char *s, int c)
+{
+	const char	*tmp;
+	char		ch;
+
+	tmp = s;
+	ch = (char)c;
 	while (*tmp != '\0')
 	{
 		if (*tmp == ch)
-			last = tmp;
+		{
+			return ((char *)tmp);
+		}
 		tmp++;
 	}
 	if (ch == '\0')
 		return ((char *)tmp);
-	return ((char *)last);
+	return (NULL);
 }
+
 // int main(void)
 // {
-//     char test[20] = "abcdebg";
+//     char test[20] = "abcdefg";
 //     char *p;
 
-//     p = ft_strrchr(test, 'b');
+//     p = ft_strchr(test, 'b');
 //     if (p != NULL)
 //     {
 //         printf("ans:%s\n", p);

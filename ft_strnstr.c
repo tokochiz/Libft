@@ -6,24 +6,12 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 20:36:52 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/02 22:20:55 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2023/12/03 15:12:29 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
-{
-	int	count;
-
-	count = 0;
-	while (*str != '\0')
-	{
-		str++;
-		count++;
-	}
-	return (count);
-}
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
@@ -52,38 +40,38 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
 
-int	main(void)
-{
-	const char	*haystack;
-	const char	*needle1;
-	const char	*needle2;
-	size_t		len;
-	char		*result1;
-	char		*result2;
+// int	main(void)
+// {
+// 	const char	*haystack;
+// 	const char	*needle1;
+// 	const char	*needle2;
+// 	size_t		len;
+// 	char		*result1;
+// 	char		*result2;
 
-	haystack = "This is a simple example.";
-	needle1 = "simple";
-	needle2 = "not_found";
-	len = 20;
-	// needle1 を haystack で検索
-	result1 = ft_strnstr(haystack, needle1, len);
-	if (result1 != NULL)
-	{
-		printf("Needle1 found at position: %ld\n", result1 - haystack);
-	}
-	else
-	{
-		printf("Needle1 not found.\n");
-	}
-	// needle2 を haystack で検索
-	result2 = ft_strnstr(haystack, needle2, len);
-	if (result2 != NULL)
-	{
-		printf("Needle2 found at position: %ld\n", result2 - haystack);
-	}
-	else
-	{
-		printf("Needle2 not found.\n");
-	}
-	return (0);
-}
+// 	haystack = "This is a simple example.";
+// 	needle1 = "simple";
+// 	needle2 = "not_found";
+// 	len = 20;
+// 	// needle1 を haystack で検索
+// 	result1 = ft_strnstr(haystack, needle1, len);
+// 	if (result1 != NULL)
+// 	{
+// 		printf("Needle1 found at position: %ld\n", result1 - haystack);
+// 	}
+// 	else
+// 	{
+// 		printf("Needle1 not found.\n");
+// 	}
+// 	// needle2 を haystack で検索
+// 	result2 = ft_strnstr(haystack, needle2, len);
+// 	if (result2 != NULL)
+// 	{
+// 		printf("Needle2 found at position: %ld\n", result2 - haystack);
+// 	}
+// 	else
+// 	{
+// 		printf("Needle2 not found.\n");
+// 	}
+// 	return (0);
+// }

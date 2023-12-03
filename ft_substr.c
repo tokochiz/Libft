@@ -3,25 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ctokoyod <ctokoyod@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/19 22:00:36 by  ctokoyod         #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2023/11/25 17:44:23 by  ctokoyod        ###   ########.fr       */
-=======
-/*   Updated: 2023/11/21 22:34:44 by ctokoyod         ###   ########.fr       */
->>>>>>> c98ca7803554d518826830d07e04a302220660c2
+/*   Created: 2023/12/03 18:21:23 by  ctokoyod         #+#    #+#             */
+/*   Updated: 2023/12/03 18:49:42 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    // 家からcommit test
-    // test
-}
+	char *ch;
+	size_t s_len;
+	size_t i;
+	i = 0;
 
-int main(void)
-{
+	s_len = ft_strlen(s);
+	if (start >= s_len || len == 0)
+		return (NULL);
+
+	if(len >= s_len - start)
+		len = s_len - start;
+
+	ch = (char *)malloc(sizeof(char) * len + 1);
+	if(ch == NULL)
+		return NULL;
+		
+	while (i < len)
+	{
+		ch[i] = s[start + i];
+		i++;
+	}
+	ch[len] = '\0';
+	return (ch);
 }

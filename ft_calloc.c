@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 18:25:39 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/03 21:58:33 by  ctokoyod        ###   ########.fr       */
+/*   Created: 2023/12/03 16:25:09 by  ctokoyod         #+#    #+#             */
+/*   Updated: 2023/12/03 17:23:52 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_calloc(size_t count, size_t size)
 {
-	while (n > 0 && (unsigned char *)s1 != '\0' && (unsigned char *)s2 != '\0'
-		&& (unsigned char *)s1 == (unsigned char *)s2)
-	{
-		s1++;
-		s2++;
-		n--;
+	void	*p;
+	size_t	total_size;
+
+	if (count == 0 || size == 0){
+		count = 1;
+		size = 1;
 	}
-	if ((*s1 == '\0' && *s2 == '\0') || n == 0)
-	{
-		return (0);
-	}
-	return (*s1 - *s2);
+		
+	total_size = count * size;
+	p = malloc(total_size);
+	if (p == NULL)
+		return (NULL);
+	ft_bzero(p, total_size);
+	return (p);
 }
