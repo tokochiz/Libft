@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:50:57 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/03 20:52:53 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2023/12/17 22:40:16 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,24 +50,24 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (result);
 }
 
-int	main(void)
-{
-	const char *s1 = "Hello, |";
-	const char *s2 = "|World!";
-	char *result = ft_strjoin(s1, s2);
+// int	main(void)
+// {
+// 	const char *s1 = "Hello, |";
+// 	const char *s2 = "|World!";
+// 	char *result = ft_strjoin(s1, s2);
 
-	if (result != NULL)
-	{
-		// Output the joined string
-		printf("Joined String: %s\n", result);
+// 	if (result != NULL)
+// 	{
+// 		// Output the joined string
+// 		printf("Joined String: %s\n", result);
 
-		// Don't forget to free the allocated memory
-		free(result);
-	}
-	else
-	{
-		fprintf(stderr, "Memory allocation failed.\n");
-	}
+// 		// Don't forget to free the allocated memory
+// 		free(result);
+// 	}
+// 	else
+// 	{
+// 		fprintf(stderr, "Memory allocation failed.\n");
+// 	}
 
-	return (0);
-}
+// 	return (0);
+// }
