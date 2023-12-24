@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 12:40:59 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/24 17:39:14 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2023/12/24 18:00:15 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,17 +52,22 @@ char	*ft_itoa(int n)
 	int		sign;
 	int		n_len;
 	char	*n_str;
+	char	*special_case_intmin;
 
 	i = 0;
 	sign = 0;
 	n_len = 0;
+	if (n == -2147483648)
+	{
+		special_case_intmin = ft_strdup("-2147483648");
+		return (special_case_intmin);
+	}
 	if (n < 0)
 	{
 		sign = 1;
 		n = n * -1;
 	}
 	n_len = count_n_len(n);
-	printf("n_len : %d\n", n_len);
 	n_str = (char *)malloc(sizeof(char) * (sign + n_len + 1));
 	if (n_str == NULL)
 		return (NULL);
@@ -70,13 +75,13 @@ char	*ft_itoa(int n)
 	return (n_str);
 }
 
-int	main(void)
-{
-	// さまざまな入力でテスト
-	printf("整数: %d\n文字列: %s\n", 12345, ft_itoa(12345));
-	printf("整数: %d\n文字列: %s\n", -6789, ft_itoa(-6789));
-	printf("整数: %d\n文字列: %s\n", 0, ft_itoa(0));
-	printf("整数: %d\n文字列: %s\n", INT_MAX, ft_itoa(INT_MAX));
-	printf("整数: %d\n文字列: %s\n", INT_MIN, ft_itoa(INT_MIN));
-	return (0);
-}
+// int	main(void)
+// {
+// 	// さまざまな入力でテスト
+// 	printf("整数: %d\n文字列: %s\n", 12345, ft_itoa(12345));
+// 	printf("整数: %d\n文字列: %s\n", -6789, ft_itoa(-6789));
+// 	printf("整数: %d\n文字列: %s\n", 0, ft_itoa(0));
+// 	printf("整数: %d\n文字列: %s\n", INT_MAX, ft_itoa(INT_MAX));
+// 	printf("整数: %d\n文字列: %s\n", INT_MIN, ft_itoa(INT_MIN));
+// 	return (0);
+// }
