@@ -6,13 +6,12 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 20:48:03 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/17 22:41:23 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2023/12/24 20:11:04 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str);
 
 int	is_set(char const *set, char c)
 {
