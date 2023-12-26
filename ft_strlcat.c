@@ -6,45 +6,43 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 21:14:31 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/26 14:00:28 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2023/12/26 22:16:03 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str);
-
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 {
-	unsigned int	dstlen;
-	unsigned int	srclen;
-	unsigned int	maxcpsize;
-	unsigned int	cpcount;
-	char			*dsttail;
+	size_t	dst_len;
+	size_t	src_len;
+	size_t	maxcpsize;
+	size_t	cpcount;
+	char			*dst_tail;
 
 	if (dst == NULL || src == NULL)
 		return (0);
-	dstlen = ft_strlen(dst);
-	srclen = ft_strlen(src);
-	dsttail = dst + dstlen;
-	if (dstsize <= dstlen)
-		return (dstsize + srclen);
-	maxcpsize = dstsize - dstlen - 1;
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	dst_tail = dst + dst_len;
+	if (dst_size <= dst_len)
+		return (dst_size + src_len);
+		
+	maxcpsize = dst_size - dst_len - 1;
 	cpcount = 0;
-	while (cpcount < maxcpsize && *src != '\0')
+	while (cpcount++ < maxcpsize && *src != '\0')
 	{
-		*dsttail = *src;
+		*dst_tail = *src;
 		src++;
-		dsttail++;
-		cpcount++;
+		dst_tail++;
 	}
-	*dsttail = '\0';
-	return (dstlen + srclen);
+	*dst_tail = '\0';
+	return (dst_len + src_len);
 }
 
 // int main(void)
 // {
-//     char dest[20] = "Hello, ";
+//     char dest[10] = "Hello, ";
 //     const char *src = "world!";
 //     size_t dest_size = sizeof(dest);
 

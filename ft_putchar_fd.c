@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 21:25:36 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/24 23:13:04 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2023/12/26 22:15:47 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ void ft_putchar_fd(char c, int fd)
 }
 
 
-int	main(void)
-{
-	long	i;
+// int	main(void)
+// {
+// 	long	i;
 
-	i = 0;
-	ft_putchar_fd(i, 1);
-	ft_putchar_fd('\n', 1);
-	ft_putchar_fd('0', 1);
-	ft_putchar_fd('\n', 1);
-	return (0);
-}
+// 	i = 0;
+// 	ft_putchar_fd(i, 1);
+// 	ft_putchar_fd('\n', 1);
+// 	ft_putchar_fd('0', 1);
+// 	ft_putchar_fd('\n', 1);
+// 	return (0);
+// }

@@ -6,17 +6,17 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 14:26:38 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/26 14:37:03 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2023/12/24 19:16:21 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if ((c >= 'A' && c <= 'Z'))
 	{
-		c = c + ('a'-'A');
+		c = c + ('a' - 'A');
 	}
 	return (c);
 }
