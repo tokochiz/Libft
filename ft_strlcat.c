@@ -6,29 +6,28 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 21:14:31 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/26 22:16:03 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/02 15:30:48 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dst_len;
 	size_t	src_len;
 	size_t	maxcpsize;
 	size_t	cpcount;
-	char			*dst_tail;
+	char	*dst_tail;
 
-	if (dst == NULL || src == NULL)
-		return (0);
-	dst_len = ft_strlen(dst);
+	dst_len = 0;
+	if (dst != NULL)
+		dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	dst_tail = dst + dst_len;
-	if (dst_size <= dst_len)
-		return (dst_size + src_len);
-		
-	maxcpsize = dst_size - dst_len - 1;
+	if (dstsize <= dst_len)
+		return (dstsize + src_len);
+	maxcpsize = dstsize - dst_len - 1;
 	cpcount = 0;
 	while (cpcount++ < maxcpsize && *src != '\0')
 	{

@@ -6,47 +6,32 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:50:57 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/17 22:40:16 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/02 17:50:06 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *dest, char const *src)
-{
-	char	*d;
-
-	d = dest;
-	while (*d != '\0')
-		d++;
-	while (*src != '\0')
-	{
-		*d = *src;
-		d++;
-		src++;
-	}
-	*d = '\0';
-	return (dest);
-}
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	total_len;
+	size_t	s1_len;
+	size_t	s2_len;
 	char	*result;
-	char	*d;
+	char	*dest;
 
-	total_len = ft_strlen(s1) + ft_strlen(s2);
-	result = (char *)malloc(sizeof(char) * total_len + 1);
+	if (s1 == NULL)
+		return (ft_strdup(s2));
+	if (s2 == NULL)
+		return (ft_strdup(s1));
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	result = (char *)malloc(sizeof(char) * s1_len + s2_len + 1);
 	if (result == NULL)
 		return (NULL);
-	d = result;
-	while (*s1 != '\0')
-	{
-		*d = *s1;
-		d++;
-		s1++;
-	}
-	d = ft_strcat(d, s2);
+	dest = result;
+	ft_memcpy(dest, s1, s1_len);
+	ft_memcpy(dest + s1_len, s2, s2_len);
+	result[s1_len + s2_len] = '\0';
 	return (result);
 }
 

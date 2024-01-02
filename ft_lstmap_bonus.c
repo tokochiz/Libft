@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 19:41:33 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/26 22:15:03 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/02 18:09:52 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst != NULL)
 	{
 		new_node = ft_lstnew(f(lst->content));
-		if (new_node != NULL)
+		if (new_node == NULL)
 		{
 			ft_lstclear(&new_list, del);
 			return (NULL);

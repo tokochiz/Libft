@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 19:15:52 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/26 21:46:42 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/02 18:05:55 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,12 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*current;
-
 	if (lst == NULL || f == NULL)
 		return ;
-	current = lst;
-	while (current != NULL)
+	while (lst != NULL)
 	{
 		f(lst->content);
-		current = current->next;
+		lst = lst->next;
 	}
 }
 

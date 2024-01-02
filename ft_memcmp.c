@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 20:04:41 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/03 16:51:52 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/02 18:58:41 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,29 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
+// int main(){
+// 	size_t	size;
+// 	int		result;
+
+// 	// テスト用のデータ
+// 	char str1[] = "Hello";
+// 	char str2[] = "Hellp";
+// 	size = 5;
+// 	// memcmp 関数を使用して文字列の比較
+// 	result = memcmp(str1, str2, size);
+// 	// 結果の表示
+// 	if (result == 0)
+// 	{
+// 		printf("The strings are equal.\n");
+// 	}
+// 	else if (result > 0)
+// 	{
+// 		printf("str1 > str2\n");
+// 	}
+// 	else
+// 	{
+// 		printf("str1 < str2\n");
+// 	}
+// 	return (0);
+// }

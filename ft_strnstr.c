@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 20:36:52 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/03 15:12:29 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/02 18:43:39 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,12 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		return (NULL);
 	if (needle_len == 0 || len == 0)
 		return ((char *)haystack);
-
 	i = 0;
 	while (haystack[i] != '\0' && i < len)
 	{
 		j = 0;
-		while (haystack[i + j] != '\0' && needle[j] != '\0' 
-				&& haystack[i + j] == needle[j] && i + j < len)
+		while (haystack[i + j] != '\0' && needle[j] != '\0' && haystack[i
+			+ j] == needle[j] && i + j < len)
 		{
 			j++;
 			if (j == needle_len)

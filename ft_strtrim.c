@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 20:48:03 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/24 20:11:04 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/02 18:42:55 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 // 	{
 // 		// 結果を出力するか、適切な処理を行います
 // 		printf("結果: %s\n", result);
-// 		free(result); // メモリを解放することを忘れずに
+// 		free(result); // メモリを解放する
 // 	}
 
 // 	return (0);
