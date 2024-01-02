@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 17:12:14 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/25 18:28:12 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/02 19:30:55 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,3 @@ size_t	ft_strlen(const char *str)
 	}
 	return (count);
 }
-

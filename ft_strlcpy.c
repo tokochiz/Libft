@@ -6,13 +6,11 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 20:15:37 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/11/25 21:13:11 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/02 19:30:32 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *str);
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
