@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 18:56:01 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/02 18:58:58 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/04 12:54:46 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*tmp;
-	unsigned char		target;
+	unsigned char	target;
 
 	target = (unsigned char)c;
 	tmp = (unsigned char *)s;

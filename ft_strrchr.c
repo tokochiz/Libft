@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 17:43:53 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/03 15:32:19 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/04 12:56:48 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ char	*ft_strrchr(const char *s, int c)
 {
 	unsigned char	*tmp;
 	unsigned char	*last;
-    char ch;
+	char			ch;
 
 	tmp = (unsigned char *)s;
 	last = NULL;
-    ch = (char)c;
+	ch = (char)c;
 	while (*tmp != '\0')
 	{
 		if (*tmp == ch)

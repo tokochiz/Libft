@@ -6,12 +6,11 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 20:48:03 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/02 18:42:55 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/04 12:59:33 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 int	is_set(char const *set, char c)
 {

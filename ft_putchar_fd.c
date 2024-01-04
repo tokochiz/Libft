@@ -6,17 +6,16 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 21:25:36 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/26 22:15:47 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/04 12:55:26 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
 
 // int	main(void)
 // {
