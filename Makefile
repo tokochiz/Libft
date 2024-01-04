@@ -16,19 +16,18 @@ ft_lstiter_bonus.c ft_lstmap_bonus.c \
 OBJS = $(SRCS:.c=.o)
 
 ifdef WITH_BONUS
-OBJS += $(SRCS_BONUS:.c=.o)
+OBJS += $(OBJS_BONUS)
 endif
 
-OBJS_BONUS = $(SRCS_BONUS:.c=.o)
+OBJS_BONUS=$(SRCS_BONUS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
-	ranlib $(NAME)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -I. -c $< -o $@
 
 clean:
 	rm -f $(OBJS) $(OBJS_BONUS)
@@ -41,4 +40,4 @@ re: fclean all
 bonus:
 	make WITH_BONUS=1 all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
