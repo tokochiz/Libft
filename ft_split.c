@@ -6,20 +6,17 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 22:41:53 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/24 12:22:00 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/04 13:18:45 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	count_words(char const *s, char c)
 {
-	int	same_c;
 	int	words;
 	int	i;
 
-	same_c = 0;
 	words = 0;
 	i = 0;
 	while (s[i] != '\0')
@@ -56,17 +53,15 @@ char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		j;
-	int		s_words;
 	int		word_length;
 	char	**words_array;
 
-	s_words = count_words(s, c);
-	words_array = (char **)malloc(sizeof(char *) * (s_words + 1));
+	words_array = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (words_array == NULL)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (i < s_words)
+	while (i < count_words(s, c))
 	{
 		while (s[j] == c && s[j] != '\0')
 			j++;
@@ -79,7 +74,7 @@ char	**ft_split(char const *s, char c)
 		words_array[i] = make_malloc_s_split(&s[j - word_length], word_length);
 		i++;
 	}
-	words_array[s_words] = NULL;
+	words_array[count_words(s, c)] = NULL;
 	return (words_array);
 }
 

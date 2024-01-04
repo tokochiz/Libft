@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 12:40:59 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/24 18:00:15 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/04 12:15:40 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,11 @@ char	*set_number(int n, int sign, int n_len, char *n_str)
 
 char	*ft_itoa(int n)
 {
-	int		i;
 	int		sign;
 	int		n_len;
 	char	*n_str;
 	char	*special_case_intmin;
 
-	i = 0;
 	sign = 0;
 	n_len = 0;
 	if (n == -2147483648)

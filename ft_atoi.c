@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 22:42:33 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/03 21:35:50 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/04 12:50:07 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,23 @@ static int	ft_isspace(const char *str)
 {
 	if (*str == ' ' || *str == '\f' || *str == '\n' || *str == '\r'
 		|| *str == '\t' || *str == '\v')
+	{
 		return (1);
+	}
 	return (0);
+}
+
+const char	*move_to_digit(const char *str, int *sign)
+{
+	while (ft_isspace(str))
+	{
+		str++;
+	}
+	if (*str == '-')
+		*sign = -1;
+	if (*str == '-' || *str == '+')
+		str++;
+	return (str);
 }
 
 int	ft_atoi(const char *str)
@@ -27,11 +42,7 @@ int	ft_atoi(const char *str)
 
 	sign = 1;
 	result = 0;
-	while (ft_isspace(str))
-		str++;
-	while (*str == '-' || *str == '+')
-		if (*str++ == '-')
-			sign = sign * -1;
+	str = move_to_digit(str, &sign);
 	while (*str >= '0' && *str <= '9')
 	{
 		if ((LONG_MAX - (*str - '0')) / 10 < (sign * result))
@@ -46,10 +57,10 @@ int	ft_atoi(const char *str)
 
 // int	main(void)
 // {
-// 	const char *str = "  -12345abc";
-// 	int result = ft_atoi(str);
+// 	const char *str = "-922337203685477581";
 
-// 	printf("Result: %d\n", result);
+// 	printf("Result: %d\n", ft_atoi(str));
+// 	printf("Result: %d\n", atoi(str));
 
 // 	return (0);
 // }

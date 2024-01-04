@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 19:34:21 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/25 20:57:47 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/04 12:51:40 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*node;
 
-	node = malloc(sizeof(size_t));
+	node = malloc(sizeof(t_list));
 	if (node == NULL)
 		return (NULL);
 	node->content = content;
