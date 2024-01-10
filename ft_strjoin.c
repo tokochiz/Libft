@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 18:50:57 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/04 22:18:54 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/05 13:53:23 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*result;
 	char	*dest;
 
-	if (s1 == NULL && s2 == NULL)
+	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	if (s1 == NULL)
-		return (ft_strdup(s2));
-	if (s2 == NULL)
-		return (ft_strdup(s1));
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	result = (char *)malloc(sizeof(char) * s1_len + s2_len + 1);

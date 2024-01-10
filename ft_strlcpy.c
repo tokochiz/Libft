@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 20:15:37 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/02 19:30:32 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/10 21:58:47 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,26 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	char		*x;
-	const char	*y;
+	char		*dst_c;
+	const char	*src_c;
 	size_t		len;
 
-	x = dst;
-	y = src;
+	dst_c = dst;
+	src_c = src;
 	len = 0;
-	len = ft_strlen(y);
+	len = ft_strlen(src_c);
 	if (dstsize == 0)
 	{
 		return (len);
 	}
-	while (*y != '\0' && dstsize - 1)
+	while (*src_c != '\0' && dstsize - 1)
 	{
-		*x = *y;
-		x++;
-		y++;
+		*dst_c = *src_c;
+		dst_c++;
+		src_c++;
 		dstsize--;
 	}
-	if (dstsize > 0)
-	{
-		*x = '\0';
-	}
+	*dst_c = '\0';
 	return (len);
 }
 

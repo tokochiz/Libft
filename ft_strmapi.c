@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 18:13:30 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/24 21:56:26 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/05 14:23:31 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (result);
 }
 
-char	f_tolower(unsigned int i, char c)
-{
-	(void)i;
-	if (c >= 'A' && c <= 'Z')
-		c = c + ('a' - 'A');
-	return (c);
-}
+// char	f_tolower(unsigned int i, char c)
+// {
+// 	(void)i;
+// 	if (c >= 'A' && c <= 'Z')
+// 		c = c + ('a' - 'A');
+// 	return (c);
+// }
 
 // int	main(void)
 // {
