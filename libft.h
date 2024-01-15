@@ -6,13 +6,14 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 18:29:18 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/10 21:52:53 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/15 21:58:05 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <limits.h>
+# include <stddef.h>
 # include <stdint.h>
 # include <stdio.h>
 # include <stdlib.h>

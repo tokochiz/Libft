@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 18:56:53 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/02 14:28:01 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/15 20:01:02 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,22 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char		*dst_p;
 	const unsigned char	*src_p;
-	int					i;
+	int_fast32_t		i;
 
-	dst_p = (unsigned char *)dst;
-	src_p = (const unsigned char *)src;
 	if (dst == NULL && src == NULL)
 		return (dst);
-	if (dst_p > src_p && dst_p - src_p < (int)len)
+	dst_p = (unsigned char *)dst;
+	src_p = (const unsigned char *)src;
+	i = len;
+	if (dst_p > src_p)
 	{
-		i = len;
-		while (--i >= 0)
+		
+		while (i > 0)
+		{
+			i--;
 			dst_p[i] = src_p[i];
+			
+		}
 		return (dst);
 	}
 	ft_memcpy(dst, src, len);

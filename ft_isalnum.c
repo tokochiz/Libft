@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 16:35:52 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/04 13:24:35 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/15 19:43:35 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >= 'a'
-			&& c <= 'z'))
-	{
+	if (ft_isdigit(c) || ft_isalpha(c))
 		return (1);
-	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 18:13:30 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/05 14:23:31 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/15 21:44:57 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*result;
-	int		i;
+	size_t	s_len;
+	size_t	i;
 
 	if (s == NULL || f == NULL)
 		return (NULL);
-	result = ft_strdup(s);
+	s_len = ft_strlen(s);
+	result = (char *)malloc(s_len + 1);
 	if (result == NULL)
 		return (NULL);
 	i = 0;
@@ -28,6 +30,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		result[i] = f(i, s[i]);
 		i++;
 	}
+	result[s_len] = '\0';
 	return (result);
 }
 

@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 19:41:57 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/25 22:15:25 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/15 21:22:38 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (lst == NULL || new == NULL)
-	{
 		return ;
-	}
 	else
 	{
 		new->next = *lst;

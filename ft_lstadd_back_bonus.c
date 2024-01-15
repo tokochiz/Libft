@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 21:24:07 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/25 22:15:19 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/15 21:22:48 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	t_list	*tail;
 
 	if (*lst == NULL)
-	{
 		*lst = new;
-	}
 	else
 	{
 		tail = ft_lstlast(*lst);
