@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 18:56:53 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/15 20:01:02 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/16 20:48:54 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = len;
 	if (dst_p > src_p)
 	{
-		
 		while (i > 0)
 		{
 			i--;
 			dst_p[i] = src_p[i];
-			
 		}
 		return (dst);
 	}

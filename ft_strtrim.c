@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 20:48:03 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/15 21:28:02 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/16 21:32:39 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	is_set(char const *set, char c)
 	return (0);
 }
 
-size_t	ft_strset_tail(char const *str, char const *set)
+static size_t	ft_strset_tail(char const *str, char const *set)
 {
 	int		i;
 	int		j;
@@ -48,7 +48,7 @@ size_t	ft_strset_tail(char const *str, char const *set)
 	return (str_len - j);
 }
 
-char	*ft_strset_top(char const *str, char const *set)
+static char	*ft_strset_top(char const *str, char const *set)
 {
 	int	i;
 

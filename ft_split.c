@@ -6,13 +6,13 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 22:41:53 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/04 22:16:52 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/16 21:31:59 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	words;
 	int	i;
@@ -31,7 +31,7 @@ int	count_words(char const *s, char c)
 	return (words);
 }
 
-char	*make_malloc_s_split(char const *s, int word_length)
+static char	*make_malloc_s_split(char const *s, int word_length)
 {
 	int		i;
 	char	*word;
@@ -49,7 +49,7 @@ char	*make_malloc_s_split(char const *s, int word_length)
 	return (word);
 }
 
-void	*free_words(char **words_array, int i)
+static void	*free_words(char **words_array, int i)
 {
 	while (i >= 0)
 	{
@@ -60,7 +60,7 @@ void	*free_words(char **words_array, int i)
 	return (NULL);
 }
 
-char	**set_word(char const *s, char c, char **words_array, int s_words)
+static char	**set_word(char const *s, char c, char **words_array, int s_words)
 {
 	int	word_length;
 	int	j;

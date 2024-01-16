@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 22:42:33 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/15 21:49:35 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/16 21:40:37 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	ft_isspace(const char *str)
 	return (0);
 }
 
-const char	*move_to_digit(const char *str, int *sign)
+static const char	*move_to_digit(const char *str, int *sign)
 {
 	while (ft_isspace(str))
 	{

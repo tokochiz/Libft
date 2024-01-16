@@ -6,13 +6,13 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 12:40:59 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/04 12:15:40 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/16 21:31:00 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_n_len(int n)
+static int	count_n_len(int n)
 {
 	int	len;
 
@@ -32,7 +32,7 @@ int	count_n_len(int n)
 	return (len);
 }
 
-char	*set_number(int n, int sign, int n_len, char *n_str)
+static char	*set_number(int n, int sign, int n_len, char *n_str)
 {
 	if (sign == 1)
 		n_str[0] = '-';

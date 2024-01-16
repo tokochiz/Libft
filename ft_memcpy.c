@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 14:30:39 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/15 19:47:18 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/16 21:01:36 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,16 @@
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char	*dst_c;
+	size_t			i;
 
 	if (dst == NULL && src == NULL)
 		return (NULL);
 	dst_c = (unsigned char *)dst;
-	while (n-- > 0)
+	i = 0;
+	while (i < n)
 	{
 		*dst_c++ = *(unsigned char *)src++;
+		i++;
 	}
 	return ((void *)dst);
 }
