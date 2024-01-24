@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 21:14:31 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/16 21:34:07 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/17 22:26:43 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	while (i < maxcpsize && src[i] != '\0')
 	{
-		*dst_tail = src[i];
+		dst[dst_len + i] = src[i];
 		i++;
-		dst_tail++;
 	}
-	*dst_tail = '\0';
+	dst_tail[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
 

@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 12:40:59 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/16 21:31:00 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/16 22:40:27 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,8 @@ static int	count_n_len(int n)
 	if (n == 0)
 		return (1);
 	if (n < 0)
-	{
 		len++;
-		n = n * -1;
-	}
-	while (n > 0)
+	while (n)
 	{
 		n = n / 10;
 		len++;
@@ -32,18 +29,17 @@ static int	count_n_len(int n)
 	return (len);
 }
 
-static char	*set_number(int n, int sign, int n_len, char *n_str)
+static void	set_number(int n, int sign, int n_len, char **n_str)
 {
-	if (sign == 1)
-		n_str[0] = '-';
-	n_str[n_len + sign] = '\0';
+	if (sign)
+		*n_str[0] = '-';
+	*n_str[n_len + sign] = '\0';
 	while (n_len > 0)
 	{
 		n_len--;
-		n_str[n_len + sign] = (n % 10) + '0';
+		*n_str[n_len + sign] = (n % 10) + '0';
 		n = n / 10;
 	}
-	return (n_str);
 }
 
 char	*ft_itoa(int n)
@@ -55,7 +51,7 @@ char	*ft_itoa(int n)
 
 	sign = 0;
 	n_len = 0;
-	if (n == -2147483648)
+	if (n == INT_MIN)
 	{
 		special_case_intmin = ft_strdup("-2147483648");
 		return (special_case_intmin);
@@ -69,7 +65,7 @@ char	*ft_itoa(int n)
 	n_str = (char *)malloc(sizeof(char) * (sign + n_len + 1));
 	if (n_str == NULL)
 		return (NULL);
-	n_str = set_number(n, sign, n_len, n_str);
+	set_number(n, sign, n_len, &n_str);
 	return (n_str);
 }
 

@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 18:56:01 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/04 12:54:46 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/16 22:48:24 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	target = (unsigned char)c;
 	tmp = (unsigned char *)s;
-	while (n > 0)
+	while (n--)
 	{
 		if (*tmp == target)
 			return ((void *)tmp);
 		tmp++;
-		n--;
 	}
 	return (NULL);
 }

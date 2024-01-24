@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 17:34:02 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/10 21:15:44 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/16 22:57:03 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ void	*ft_memset(void *b, int c, size_t len)
 	ptr = b;
 	value = (unsigned char)c;
 	while (len-- > 0)
-	{
 		*ptr++ = value;
-	}
 	return (b);
 }

@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 21:44:12 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/24 23:16:48 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/24 20:38:34 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648)
+	if (n == INT_MIN)
 	{
 		ft_putstr_fd("-2147483648", fd);
 		return ;

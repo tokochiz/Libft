@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 20:04:41 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/16 21:02:00 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/24 20:36:19 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (*tmp1 != *tmp2)
+		if (tmp1[i] != tmp2[i])
 		{
-			return (*tmp1 - *tmp2);
+			return (tmp1[i] - tmp2[i]);
 		}
-		tmp1++;
-		tmp2++;
 		i++;
 	}
 	return (0);
