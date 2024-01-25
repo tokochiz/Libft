@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ctokoyod <ctokoyod@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 18:29:18 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/20 15:40:29 by ctokoyod         ###   ########.fr       */
+/*   Updated: 2024/01/25 20:41:11 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
-#include <stdbool.h>
+# include <stdbool.h>
+#define TRUE 1
+#define FALSE 0
+#define INT_MIN   (-__INT_MAX__  -1)
 
 typedef struct s_list
 {
