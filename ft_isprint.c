@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 16:45:54 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/17 20:33:19 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/28 15:05:33 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	return (c >= 32 && c <= 126);
 }

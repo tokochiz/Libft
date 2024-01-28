@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 16:40:42 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/17 20:33:04 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/28 15:05:10 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	return (c >= 0 && c <= 127);
 }

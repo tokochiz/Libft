@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 15:35:36 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/15 19:42:26 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/28 15:04:51 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int	ft_isalpha(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	return (0);
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }
