@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 19:51:56 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/04 12:56:25 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/28 15:08:06 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int	i;
+	unsigned int	i;
 
 	if (s == NULL || f == NULL)
 		return ;
