@@ -6,13 +6,13 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 21:37:10 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/16 22:59:04 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/02/27 20:10:55 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(const char *s, int fd)
 {
 	if (s == NULL)
 		return ;
