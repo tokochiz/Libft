@@ -6,23 +6,22 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 18:29:18 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/02/27 20:11:52 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/02/29 14:51:42 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <limits.h>
+# include <stdbool.h>
 # include <stddef.h>
 # include <stdint.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
-# include <stdbool.h>
-#define TRUE 1
-#define FALSE 0
-#define INT_MIN   (-__INT_MAX__  -1)
+# define TRUE 1
+# define FALSE 0
 
 typedef struct s_list
 {

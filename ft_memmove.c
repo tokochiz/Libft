@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 18:56:53 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/24 21:58:15 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/01/28 15:07:18 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char		*dst_p;
 	const unsigned char	*src_p;
-	int					i;
+	size_t				i;
 
 	if (dst == NULL && src == NULL)
 		return (dst);
