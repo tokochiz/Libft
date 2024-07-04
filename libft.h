@@ -6,7 +6,7 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 18:29:18 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/02/29 14:51:42 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/07/04 22:26:16 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,8 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+
+/*--- add it tourself ---*/
+int	ft_atoi_with_error(const char *str, int *error);
 
 #endif

@@ -6,18 +6,19 @@
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 22:42:33 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/07/04 22:19:21 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/07/04 22:32:14 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check_str(char *str, int *error)
+int	check_str(const char *str, int *error)
 {
 	if (*str != '\0')
 	{
 		*error = 1;
 	}
+	return 0;
 }
 
 static bool	ft_isspace(char c)
