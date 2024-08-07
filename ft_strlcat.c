@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
+/*   By: ctokoyod <ctokoyod@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 21:14:31 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/25 21:04:19 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/08/06 23:51:16 by ctokoyod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	src_len;
 	size_t	maxcpsize;
 	size_t	i;
-	char	*dst_tail;
+	//char	*dst_tail;
 
 	dst_len = 0;
 	if (dst != NULL)
 		dst_len = ft_strlen(dst);
 	src_len = ft_strlen((char *)src);
-	dst_tail = dst + dst_len;
+	//dst_tail = dst + dst_len;
 	if (dstsize <= dst_len)
 		return (dstsize + src_len);
 	maxcpsize = dstsize - dst_len - 1;

@@ -31,12 +31,14 @@ $(NAME): $(OBJS)
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -I. -c $< -o $@
-
+	
 clean:
-	rm -f $(OBJS) $(OBJS_BONUS)
+	del /Q $(subst /,\,$(OBJS))
+# rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	del /Q $(subst /,\,$(NAME))
+# rm -f $(NAME)
 
 re: fclean all
 
