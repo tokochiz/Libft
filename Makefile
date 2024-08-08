@@ -28,6 +28,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
+	ranlib $@
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -I. -c $< -o $@
