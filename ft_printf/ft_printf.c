@@ -23,7 +23,7 @@ static int	process_dispatch(va_list arguments, char specifier)
 	else if (specifier == 'd' || specifier == 'i')
 		return (print_d_i(va_arg(arguments, int)));
 	else if (specifier == 'u')
-		return (convert_base(va_arg(arguments, unsigned int), 0, 10));
+		return (print_u(va_arg(arguments, unsigned int)));
 	else if (specifier == 'x')
 		return (convert_hex(va_arg(arguments, unsigned int), 1));
 	else if (specifier == 'X')

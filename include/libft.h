@@ -12,6 +12,8 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# include "./ft_printf.h"
 # include <limits.h>
 # include <stdbool.h>
 # include <stddef.h>
@@ -27,7 +29,7 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-	int 			cost;
+	int				cost;
 }					t_list;
 
 /*--- Part1 ---*/
@@ -82,6 +84,6 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 
 /*--- add it tourself ---*/
-int	ft_atoi_with_error(const char *str, int *error);
+int					ft_atoi_with_error(const char *str, int *error);
 
 #endif

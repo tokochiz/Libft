@@ -35,6 +35,7 @@
 *.out
 *.app
 libft.a
+libft
 .DS_Store
 
 # End of https://www.toptal.com/developers/gitignore/api/c++

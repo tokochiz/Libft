@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "../include/libft.h"
-
 int	count_digit_hex(unsigned long long n)
 {
 	int	len;

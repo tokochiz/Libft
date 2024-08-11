@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "../include/libft.h"
 
 int	count_strlen(const char *str)
 {
@@ -67,24 +67,21 @@ int	print_u(unsigned int nbr)
 	char	*decimal_digits;
 	int		index;
 	int		len;
-	int		size;
 
 	if (nbr == 0)
 		return (print_char('0'));
 	decimal_type = "0123456789";
-	size = count_digit_decimal(nbr);
-	decimal_digits = (char *)malloc(size + 1);
+	decimal_digits = (char *)malloc(11);
 	if (decimal_digits == NULL)
 		return (0);
-	index = size - 1;
+	index = 10;
 	while (nbr > 0 && index >= 0)
 	{
 		decimal_digits[index] = decimal_type[nbr % 10];
 		nbr /= 10;
 		index--;
 	}
-	decimal_digits[size] = '\0';
-	len = print_string(decimal_digits);
+	len = print_string(&decimal_digits[index + 1]);
 	free(decimal_digits);
 	return (len);
 }
