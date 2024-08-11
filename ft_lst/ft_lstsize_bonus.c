@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/25 19:34:21 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/04 12:51:40 by  ctokoyod        ###   ########.fr       */
+/*   Created: 2023/12/25 20:56:48 by  ctokoyod         #+#    #+#             */
+/*   Updated: 2024/01/02 19:03:10 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
-t_list	*ft_lstnew(void *content)
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*node;
+	t_list	*current;
+	int		node_counts;
 
-	node = malloc(sizeof(t_list));
-	if (node == NULL)
-		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
+	current = lst;
+	node_counts = 0;
+	while (current != NULL)
+	{
+		node_counts++;
+		current = current->next;
+	}
+	return (node_counts);
 }
-
-// int	main(void)
-// {
-// 	t_list *result;
-
-// 	result = ft_lstnew("Hello world!");
-// 	printf("%s\n", result->content);
-// 	return (0);
-// }

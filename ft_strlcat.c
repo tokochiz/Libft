@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 // Add requirements not written in the specification
 // dst == NULL && dstsize ==0

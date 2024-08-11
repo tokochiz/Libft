@@ -1,8 +1,14 @@
-NAME = libft.a
+NAME = libft
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+INC_DIR = includes
+LIBFT = $(LIBFT_DIR)libft.a
+LIBFT_DIR = ./Libft/
+CFLAGS = -Wall -Wextra -Werror -I $(INC_DIR)
 
-SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
+LST_DIR = ./ft_lst/
+PRINTF_DIR = ./ft_printf/
+
+SRCS_FILES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c \
 ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c  ft_strrchr.c ft_strncmp.c \
 ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c \
@@ -12,17 +18,26 @@ ft_lstnew_bonus.c ft_lstadd_back_bonus.c ft_lstlast_bonus.c\
 ft_lstsize_bonus.c ft_lstadd_front_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c \
 ft_lstiter_bonus.c ft_lstmap_bonus.c \
 ft_atoi_with_error.c \
-# SRCS_BONUS = ft_lstnew_bonus.c ft_lstadd_back_bonus.c ft_lstlast_bonus.c\
-# ft_lstsize_bonus.c ft_lstadd_front_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c \
-# ft_lstiter_bonus.c ft_lstmap_bonus.c \
 
-OBJS = $(SRCS:.c=.o)
+LST_FILES = ft_lstnew_bonus.c ft_lstadd_back_bonus.c ft_lstlast_bonus.c\
+ft_lstsize_bonus.c ft_lstadd_front_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c \
+ft_lstiter_bonus.c ft_lstmap_bonus.c \
 
-ifdef WITH_BONUS
-OBJS += $(OBJS_BONUS)
-endif
+PRINTF_FILES = ft_printf.c \
+		   print_string.c\
+		   print_hex.c 
 
-OBJS_BONUS=$(SRCS_BONUS:.c=.o)
+
+SRCS = $(SRCS_FILES)
+LST_SRCS = $(addprefix $(LST_DIR)/, $(LST_FILES))
+PRINTF_SRCS = $(addprefix $(PRINTF_DIR)/, $(PRINTF_FILES))
+OBJS = $(SRCS:.c=.o) $(LST_SRCS:.c=.o) $(PRINTF_SRCS:.c=.o)
+
+# ifdef WITH_BONUS
+# OBJS += $(OBJS_BONUS)
+# endif
+
+# OBJS_BONUS=$(SRCS_BONUS:.c=.o)
 
 all: $(NAME)
 
@@ -34,12 +49,12 @@ $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) -I. -c $< -o $@
 	
 clean:
-	del /Q $(subst /,\,$(OBJS))
-# rm -f $(OBJS)
+#del /Q $(subst /,\,$(OBJS))
+	rm -f $(OBJS)
 
 fclean: clean
-	del /Q $(subst /,\,$(NAME))
-# rm -f $(NAME)
+#del /Q $(subst /,\,$(NAME))
+	rm -f $(NAME)
 
 re: fclean all
 

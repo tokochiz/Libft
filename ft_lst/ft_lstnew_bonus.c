@@ -1,22 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/25 21:20:48 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/01/16 23:42:15 by  ctokoyod        ###   ########.fr       */
+/*   Created: 2023/12/25 19:34:21 by  ctokoyod         #+#    #+#             */
+/*   Updated: 2024/01/04 12:51:40 by  ctokoyod        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+t_list	*ft_lstnew(void *content)
 {
-	if (lst == NULL)
+	t_list	*node;
+
+	node = malloc(sizeof(t_list));
+	if (node == NULL)
 		return (NULL);
-	while (lst->next != NULL)
-		lst = lst->next;
-	return (lst);
+	node->content = content;
+	node->next = NULL;
+	return (node);
 }
+
+// int	main(void)
+// {
+// 	t_list *result;
+
+// 	result = ft_lstnew("Hello world!");
+// 	printf("%s\n", result->content);
+// 	return (0);
+// }
