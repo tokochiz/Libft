@@ -6,7 +6,7 @@
 /*   By: ctokoyod <ctokoyod@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 18:29:18 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/08/14 22:12:37 by ctokoyod         ###   ########.fr       */
+/*   Updated: 2024/08/15 19:50:15 by ctokoyod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 	int				cost;
+	int				type;
 }					t_list;
 
 /*--- Part1 ---*/
