@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_with_error.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
+/*   By: ctokoyod <ctokoyod@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 22:42:33 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/07/04 22:32:14 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/08/20 23:06:29 by ctokoyod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	check_str(const char *str, int *error)
 	{
 		*error = 1;
 	}
-	return 0;
+	return (0);
 }
 
 static bool	ft_isspace(char c)
@@ -64,7 +64,7 @@ int	ft_atoi_with_error(const char *str, int *error)
 		str++;
 	}
 	check_str(str, error);
-	return (int)(sign * result);
+	return ((int)(sign * result));
 }
 
 // int	main(void)

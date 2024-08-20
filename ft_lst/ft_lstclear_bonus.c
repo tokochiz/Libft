@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By:  ctokoyod < ctokoyod@student.42tokyo.jp    +#+  +:+       +#+        */
+/*   By: ctokoyod <ctokoyod@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 19:23:18 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2023/12/26 21:05:16 by  ctokoyod        ###   ########.fr       */
+/*   Updated: 2024/08/20 22:59:21 by ctokoyod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while (current != NULL)
 	{
 		temp = current->next;
-		del(current->content);
+		if (del != NULL)
+			del(current->content);
 		free(current);
 		current = temp;
 	}
