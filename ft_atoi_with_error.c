@@ -6,7 +6,7 @@
 /*   By: ctokoyod <ctokoyod@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 22:42:33 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/08/20 23:06:29 by ctokoyod         ###   ########.fr       */
+/*   Updated: 2024/09/01 17:16:02 by ctokoyod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ int	ft_atoi_with_error(const char *str, int *error)
 	check_str(str, error);
 	return ((int)(sign * result));
 }
+
 
 // int	main(void)
 // {
