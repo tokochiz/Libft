@@ -6,20 +6,11 @@
 /*   By: ctokoyod <ctokoyod@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 22:42:33 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/09/01 17:16:02 by ctokoyod         ###   ########.fr       */
+/*   Updated: 2024/09/09 19:43:45 by ctokoyod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
-
-int	check_str(const char *str, int *error)
-{
-	if (*str != '\0')
-	{
-		*error = 1;
-	}
-	return (0);
-}
 
 static bool	ft_isspace(char c)
 {
@@ -40,33 +31,31 @@ static const char	*move_to_digit(const char *str, int *sign)
 	return (str);
 }
 
-int	ft_atoi_with_error(const char *str, int *error)
+bool	ft_atoi_with_error(const char *str, int *result)
 {
-	int		sign;
-	long	result;
+	int				sign;
+	long long num;
 
 	sign = 1;
-	result = 0;
-	*error = 0;
+	num = 0;
 	str = move_to_digit(str, &sign);
 	if (!*str)
-	{
-		*error = 1;
-		return (0);
-	}
+		return (false);
 	while (ft_isdigit(*str))
 	{
-		if ((LONG_MAX - (*str - '0')) / 10 < (sign * result))
-			return ((int)LONG_MAX);
-		if ((LONG_MIN + (*str - '0')) / 10 > (sign * result))
-			return ((int)LONG_MIN);
-		result = result * 10 + (*str - '0');
+		if (num > (LONG_MIN + (*str - '0')) / 10)
+			return false;
+		num = num * 10 + (*str - '0');
 		str++;
 	}
-	check_str(str, error);
-	return ((int)(sign * result));
+	if (*str != '\0')
+		return (false);
+	if ((sign == 1 && num > INT_MAX) || (sign == -1
+			&& num < (long long int)INT_MIN))
+		return (false);
+	*result = (int)(sign * num);
+	return (true);
 }
-
 
 // int	main(void)
 // {
