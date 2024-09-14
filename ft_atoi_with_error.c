@@ -6,7 +6,7 @@
 /*   By: ctokoyod <ctokoyod@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 22:42:33 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/09/09 19:43:45 by ctokoyod         ###   ########.fr       */
+/*   Updated: 2024/09/14 17:32:22 by ctokoyod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,28 +33,27 @@ static const char	*move_to_digit(const char *str, int *sign)
 
 bool	ft_atoi_with_error(const char *str, int *result)
 {
-	int				sign;
-	long long num;
+	int		sign;
+	long	num;
 
 	sign = 1;
 	num = 0;
 	str = move_to_digit(str, &sign);
 	if (!*str)
-		return (false);
+		return (FALSE);
 	while (ft_isdigit(*str))
 	{
-		if (num > (LONG_MIN + (*str - '0')) / 10)
-			return false;
+		if (num > (LONG_MAX - (*str - '0')) / 10)
+			return (false);
 		num = num * 10 + (*str - '0');
 		str++;
 	}
 	if (*str != '\0')
-		return (false);
-	if ((sign == 1 && num > INT_MAX) || (sign == -1
-			&& num < (long long int)INT_MIN))
-		return (false);
+		return (FALSE);
+	if ((sign == 1 && num > INT_MAX) || (sign == -1 && num > -(long)INT_MIN))
+		return (FALSE);
 	*result = (int)(sign * num);
-	return (true);
+	return (TRUE);
 }
 
 // int	main(void)

@@ -6,7 +6,7 @@
 /*   By: ctokoyod <ctokoyod@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 18:29:18 by  ctokoyod         #+#    #+#             */
-/*   Updated: 2024/09/09 19:34:53 by ctokoyod         ###   ########.fr       */
+/*   Updated: 2024/09/14 16:10:04 by ctokoyod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,6 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 
-bool	ft_atoi_with_error(const char *str, int *result);
+bool				ft_atoi_with_error(const char *str, int *result);
 
 #endif
